@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bj"
+    tools:context=".MainActivity" >
+
+    <include layout="@layout/include_activity_main_title_bar" />
+    
+    <LinearLayout
+        android:id="@+id/ll_server"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_title"
+        android:layout_margin="5dp"
+        android:background="@drawable/list_default_round"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_server"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:minHeight="40dp" >
+
+            <TextView
+                android:id="@+id/tv_ip_domain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="服务器 :"
+                android:textAlignment="center"
+                android:textColor="@color/setting_default_text_gray"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_edittext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/iv_ip_arrow"
+                android:layout_toRightOf="@+id/tv_ip_domain"
+                android:gravity="center"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:text="www.test.cn"
+                android:textColor="@color/setting_default_text_gray"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_ip_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/xuankuang_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_protocol"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_margin="2dp" >
+
+            <TextView
+                android:id="@+id/tv_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="网络协议:"
+                android:textAlignment="center"
+                android:textColor="@color/setting_default_text_gray"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:id="@+id/ll_protocol_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_protocol" >
+
+                <Spinner
+                    android:id="@+id/protocol_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_server"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="请求结果 "
+            android:textColor="@color/light_gray"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/list_default_round"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxLines="10"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:text="这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果,这里显示结果……"
+                android:textColor="@color/setting_default_text_gray"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_result"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/btn_init"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="测试1" />
+        <Button
+            android:id="@+id/btn_achieve"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="测试2" />
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_clearserver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="测试3" />
+    </LinearLayout>
+
+</RelativeLayout>

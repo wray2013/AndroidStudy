@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="protocols">
+        <item>HTTP</item>
+        <item>HTTPS</item>
+    </string-array>
+    <string-array name="provider">
+        <item>中国联通</item>
+    </string-array>
+	<string-array name="province">
+        <item>湖北省</item>
+        <item>浙江省</item>
+    </string-array>
+</resources>
